@@ -20,8 +20,8 @@
 
             <!-- input text -->
             <div class="add_todo">
-                <input type="text" name="text" v-model="userTask">
-                <button @click="addTask">Add</button>
+                <input type="text" name="text" v-model="userTask" >
+                <button @click="addTask()">Add</button>
             </div>
 
             <!-- titolo logo -->
@@ -36,7 +36,7 @@
                     {{task}} <i class="fas fa-times" @click="deleteTask"></i>
                     </li>
                 </ul>
-                <p v-else> 🤩 Hai completato tutte le task 👏</p>
+                <p v-else> 🤩  HAI COMPLETATO TUTTE LE TASK  👏</p>
                 
                 
             </div>

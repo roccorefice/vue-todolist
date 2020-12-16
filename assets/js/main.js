@@ -13,7 +13,7 @@ let app = new Vue ({
             "Suonare la chitarra",
             "Chiamare la nonna"
         ],
-        userTask: "test"
+        userTask: " "
     },
     methods: {
         //funzione che consente di eliminare al click della X una singola task
@@ -21,10 +21,23 @@ let app = new Vue ({
             this.tasks.splice(index, 1);
         },
 
-        //funzione che aggiunge task a tasks array
+        //funzione che aggiunge task solo se maggiore di 4 caratteri
         addTask: function(){
-            this.tasks.push(this.userTask)
+            if(this.userTask.length > 4 && this.userTask.length > 0){
+                this.tasks.push(this.userTask)
+            } else {
+                alert("Riprova")
+            }
         }
+    },
+    //funzione che consente di aggiungere task con il tasto "invio"
+    mounted: function(){
+        document.addEventListener("keyup", e => {
+            if (e.key === "Enter"){
+                this.addTask();
+                
+            } 
+        });
     }
 
 
