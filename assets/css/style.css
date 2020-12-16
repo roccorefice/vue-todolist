@@ -31,11 +31,17 @@ body{
 }
 .list{
     padding: 10px 0;
-    background-color: lightgrey;
+    background-color: #EFEFEF;
+    border: 1px solid #463BFF;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 5px 5px 10px grey;
 }
 .list_item i {
     color:#463BFF ;
+}
+.list_item i:hover{
+    color:black ;
+    cursor: pointer;
 }
 
