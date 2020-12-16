@@ -19,26 +19,33 @@ body{
     justify-content: space-between;
 
 }
-
 .logo img{
     width: 300px;
 }
-
+.add_todo button{
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    background-color: lightseagreen;
+}
 .title{
     padding: 10px 0;
     font-size: 22px;
-
 }
 .list{
     padding: 10px 0;
     background-color: #EFEFEF;
-    border: 1px solid #463BFF;
+    border: 1px solid white;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px grey;
 }
 .list_item i {
     color:#463BFF ;
+}
+ul {
+    list-style: none;
 }
 .list_item i:hover{
     color:black ;

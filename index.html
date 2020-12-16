@@ -20,7 +20,7 @@
 
             <!-- input text -->
             <div class="add_todo">
-                <input type="text" name="text" id="">
+                <input type="text" name="text" >
                 <button>Add</button>
             </div>
 
@@ -31,14 +31,13 @@
 
             <!-- lista -->
             <div class="list">
-                <div class="list_item d_flex">
-                    <span>Fai qualcosa</span>
-                    <span> <i class="fas fa-backspace"> </i></span>
-                </div>
-                <div class="list_item d_flex">
-                    <span>Fai qualcosa di diverso</span>
-                    <span> <i class="fas fa-backspace"> </i></span>
-                </div>
+                <ul class="list_item " v-if="tasks.length > 0">
+                    <li v-for="task in tasks" v-text="task" >
+                    <i class="fas fa-backspace"></i>
+                    </li>
+                </ul>
+                <p v-else> 🤩 Hai completato tutte le task 👏</p>
+                
                 
             </div>
 
