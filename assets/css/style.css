@@ -3,6 +3,8 @@
     padding: 0;
     margin: 0;
 }
+body{
+    font-family: 'Architects Daughter', cursive;}
 
 
 .d_flex_col{
@@ -12,7 +14,28 @@
     align-items: center;
     height: 100vh;
 }
+.d_flex{
+    display: flex;
+    justify-content: space-between;
+
+}
 
 .logo img{
     width: 300px;
 }
+
+.title{
+    padding: 10px 0;
+    font-size: 22px;
+
+}
+.list{
+    padding: 10px 0;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 10px;
+}
+.list_item i {
+    color:#463BFF ;
+}
+
