@@ -32,8 +32,8 @@
             <!-- lista -->
             <div class="list">
                 <ul class="list_item " v-if="tasks.length > 0">
-                    <li v-for="task in tasks" v-text="task" >
-                    <i class="fas fa-backspace"></i>
+                    <li v-for="task in tasks" class="d_flex">
+                    {{task}} <i class="fas fa-times" @click="deleteTask"></i>
                     </li>
                 </ul>
                 <p v-else> 🤩 Hai completato tutte le task 👏</p>

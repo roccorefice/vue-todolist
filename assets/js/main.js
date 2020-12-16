@@ -13,5 +13,17 @@ let app = new Vue ({
             "Suonare la chitarra",
             "Chiamare la nonna"
         ],
+    },
+    methods: {
+        deleteTask: function(index){
+            this.tasks.splice(index, 1);
+        }
     }
+
+
+
+
+
+
+
 });

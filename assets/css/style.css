@@ -42,13 +42,13 @@ body{
     box-shadow: 5px 5px 10px grey;
 }
 .list_item i {
-    color:#463BFF ;
+    color:lightseagreen ;
 }
 ul {
     list-style: none;
 }
 .list_item i:hover{
-    color:black ;
+    color: #463BFF ;
     cursor: pointer;
 }
 
