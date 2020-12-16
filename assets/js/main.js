@@ -13,10 +13,17 @@ let app = new Vue ({
             "Suonare la chitarra",
             "Chiamare la nonna"
         ],
+        userTask: "test"
     },
     methods: {
+        //funzione che consente di eliminare al click della X una singola task
         deleteTask: function(index){
             this.tasks.splice(index, 1);
+        },
+
+        //funzione che aggiunge task a tasks array
+        addTask: function(){
+            this.tasks.push(this.userTask)
         }
     }
 

@@ -20,8 +20,8 @@
 
             <!-- input text -->
             <div class="add_todo">
-                <input type="text" name="text" >
-                <button>Add</button>
+                <input type="text" name="text" v-model="userTask">
+                <button @click="addTask">Add</button>
             </div>
 
             <!-- titolo logo -->
