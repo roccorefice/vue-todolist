@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>todolist</title>
+    <title>todolist BONUS</title>
 </head>
 <body>
 
@@ -33,12 +33,33 @@
             <!-- lista -->
             <div class="list">
                 <ul class="list_item " v-if="tasks.length > 0">
-                    <li v-for="(task, index) in tasks" class="d_flex">
-                    {{task}} <i class="fas fa-backspace" @click="deleteTask(index)"></i>
+                    <li v-for="(task in tasks" class="d_flex">
+                        {{task}}
+                        <div class="icone">
+                            <i class="fas fa-backspace" @click="deleteTask(index)"></i>
+                            <i class="fas fa-pen-square" @click="editTask(tasks)"></i>
+                            <i class="fas fa-check-square" @click="completedTask"></i>
+                        </div>
+                     
                     </li>
                 </ul>
                 <p v-else> 🤩  HAI COMPLETATO TUTTE LE TASK  👏</p>
             </div>
+<!-- 
+            <div class="list">
+                <ul class="list_item " v-if="tasks.length > 0">
+                    <li v-for="(task in completedTasks" class="d_flex">
+                        {{task}}
+                        <div class="icone">
+                            <i class="fas fa-backspace" @click="deleteTask(index)"></i>
+                            <i class="fas fa-pen-square" @click="editTask(tasks)"></i>
+                            <i class="fas fa-check-square" @click="completedTask"></i>
+                        </div>
+                     
+                    </li>
+                </ul>
+                <p v-else> 🤩  HAI COMPLETATO TUTTE LE TASK  👏</p>
+            </div> -->
 
         </div>
     </div>

@@ -69,5 +69,12 @@ ul {
 }
 .fa-backspace{
     padding-left: 20px;
+    font-size: 18px;
+
+}
+.fa-pen-square, .fa-check-square{
+    padding-left: 5px;
+    font-size: 18px;
+
 }
 
