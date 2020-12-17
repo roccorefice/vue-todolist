@@ -22,9 +22,10 @@ let app = new Vue ({
         ],
         userTask: " ",
         complete: null,
-        completedTasks: []
-        
-        
+        completedTasks: [],
+        remove: null,
+        removedTasks: [],
+        requestRemove: null
     },
     methods: {
         //funzione che consente di eliminare al click della X una singola task
@@ -42,26 +43,32 @@ let app = new Vue ({
             }
         },
 
-        //funzione che consente di modificare una task
-        // editTask: function(){
-        //     this.editTask = false
-        //     console.log(this.editedTask);
-        },
-
-        completedTask: function(){
+        //funzione che al click su icona check-square aggiunge le task completate(cliccate) all'array completedTasks
+        completedTask: function(index){
             this.complete = true;
             if(this.complete){
-                this.completedTasks.push(this.tasks)
-                console.log(this.completedTasks);
-
+                this.completedTasks.push(this.tasks[index])
             }
-
         },
-      
-    
-        
-        
+        //Funzione che aggiunge task all'array removedTasks
+        removedTask: function(index){
+            this.remove = true;
+            if(this.remove){
+                this.removedTasks.push(this.tasks[index])
+            }
+        },
+
+        //Funzione che permette di svuotare array removedTasks
+        wantRemove: function(){
+            this.requestRemove = prompt("do you want to empty the removed tasks? [Y] or [N]");
+            if(this.requestRemove === "Y"){
+                this.removedTasks = [];
+            } else {
+                this.removedTasks;
+            }
+        }
     },
+
     //funzione che consente di aggiungere task con il tasto "invio"
     mounted: function(){
         document.addEventListener("keyup", e => {

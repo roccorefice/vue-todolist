@@ -18,6 +18,19 @@ body{
     justify-content: space-between;
 
 }
+.margin_xy_25{
+    margin: 25px 0;
+}
+.margin_right_10{
+    margin-right: 10px;
+}
+.margin_left_10{
+    margin-left: 10px;
+}
+.margin_left_50{
+    margin-left: 50px;
+}
+
 .logo img{
     width: 300px;
 }
@@ -55,7 +68,7 @@ body{
     box-shadow: 0px 0px 10px grey ;
 }
 
-.list_item i {
+.special i {
     color:lightseagreen ;
 }
 
@@ -63,7 +76,7 @@ ul {
     list-style: none;
 }
 
-.list_item i:hover{
+.special i:hover{
     color: #463BFF ;
     cursor: pointer;
 }
@@ -75,6 +88,20 @@ ul {
 .fa-pen-square, .fa-check-square{
     padding-left: 5px;
     font-size: 18px;
+}
 
+.fa-check{
+    padding-left: 20px;
+    color: #89cb0e;
+}
+.fa-minus{
+    padding-left: 20px;
+    color: #cb3234;
+}
+.fa-trash-alt{
+    position: relative;
+    right:0;
+    top: 0;
+    cursor: pointer;
 }
 

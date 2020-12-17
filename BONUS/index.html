@@ -31,35 +31,50 @@
             </div>
 
             <!-- lista -->
-            <div class="list">
+            <div class="list special">
                 <ul class="list_item " v-if="tasks.length > 0">
-                    <li v-for="(task in tasks" class="d_flex">
+                    <li v-for="(task, index) in tasks" class="d_flex">
                         {{task}}
                         <div class="icone">
-                            <i class="fas fa-backspace" @click="deleteTask(index)"></i>
+                            <i class="fas fa-backspace" @click="removedTask(index)"></i>
                             <i class="fas fa-pen-square" @click="editTask(tasks)"></i>
-                            <i class="fas fa-check-square" @click="completedTask"></i>
+                            <i class="fas fa-check-square" @click="completedTask(index)" ></i>
                         </div>
                      
                     </li>
                 </ul>
                 <p v-else> 🤩  HAI COMPLETATO TUTTE LE TASK  👏</p>
             </div>
-<!-- 
-            <div class="list">
-                <ul class="list_item " v-if="tasks.length > 0">
-                    <li v-for="(task in completedTasks" class="d_flex">
-                        {{task}}
+
+            <div class="bottomList margin_xy_25 d_flex">
+                <!-- completed task -->
+                <div class="list margin_right_10">
+                    <u><strong>Completed Tasks:</strong></u>
+                    <ul class="list_item " v-if="completedTasks.length > 0">
+                        <li v-for="(completedTask in completedTasks" class="d_flex">
+                            {{completedTask}}
+                            <div class="icone">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                    <!-- removed task -->
+            <div class="list margin_left_10">
+                <u><strong>Removed Tasks:</strong></u> <i class="fas fa-trash-alt margin_left_50" @click="wantRemove"></i>
+                <ul class="list_item " v-if="removedTasks.length > 0">
+                    <li v-for="(removedTask in removedTasks" class="d_flex">
+                        {{removedTask}}
                         <div class="icone">
-                            <i class="fas fa-backspace" @click="deleteTask(index)"></i>
-                            <i class="fas fa-pen-square" @click="editTask(tasks)"></i>
-                            <i class="fas fa-check-square" @click="completedTask"></i>
+                            <i class="fas fa-minus"></i>
                         </div>
-                     
                     </li>
                 </ul>
-                <p v-else> 🤩  HAI COMPLETATO TUTTE LE TASK  👏</p>
-            </div> -->
+            </div>
+
+            </div>
+            
 
         </div>
     </div>
